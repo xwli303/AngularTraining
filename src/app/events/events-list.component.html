@@ -1,0 +1,22 @@
+<div>
+    <h1>Upcoming Angular Events</h1>
+    <hr/>
+    <div class="row">
+        <div *ngFor="let event of events" class="col-md-5">
+            <app-event-thumbnail
+            (click)="handleThumbnailClick(event.name)"
+            [event]="event">
+            </app-event-thumbnail>
+        </div>
+    </div>
+        
+    <!--[] corresponds the the @Input in thumbnail component, 
+        means that event has a input param called event,
+        pass in value event1 from list component into thumbnail component 
+    
+        evnetClick binding has to match the @output property in thumbnail comp,
+        when eventClick happens in thumbnail, handleEventClicked happens in 
+        this comp, $event is the data emitted with the event ('foo')
+    
+    -->
+</div>>
